@@ -1,3 +1,4 @@
+import carType.CarType;
 public class Car {
     private final CarType type;
     private int timeLeft;
@@ -19,22 +20,6 @@ public class Car {
         timeLeft -= amount;
     }
 
-
-    public enum CarType {
-        PASSENGER_CAR(5),
-        JEEP(8),
-        MINIBUS(10);
-
-        private final int timeCost;
-
-        CarType(int washTime) {
-            this.timeCost = washTime;
-        }
-
-        public int getTimeCost() {
-            return timeCost;
-        }
-    }
 }
 
 

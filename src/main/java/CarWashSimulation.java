@@ -1,5 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
+
 public class CarWashSimulation {
     private final int numberOfPosts;
     private final int carWashRatePerMinute = 30;
@@ -33,9 +34,6 @@ public class CarWashSimulation {
                         posts.assignCar(car);
                     }
                 }
-            }
-
-            for (CarWashPost posts : posts) {
                 if (!posts.isFree()) {
                     Car car = posts.getAssignedCar();
                     car.updateTimeLeft(1);
@@ -47,8 +45,9 @@ public class CarWashSimulation {
             }
         }
     }
-
 }
+
+
 
 
 
